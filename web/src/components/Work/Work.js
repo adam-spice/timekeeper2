@@ -11,13 +11,13 @@ const DELETE_WORK_MUTATION = gql`
   }
 `
 
-const jsonDisplay = (obj) => {
-  return (
-    <pre>
-      <code>{JSON.stringify(obj, null, 2)}</code>
-    </pre>
-  )
-}
+// const jsonDisplay = (obj) => {
+//   return (
+//     <pre>
+//       <code>{JSON.stringify(obj, null, 2)}</code>
+//     </pre>
+//   )
+// }
 
 const timeTag = (datetime) => {
   return (
@@ -27,9 +27,9 @@ const timeTag = (datetime) => {
   )
 }
 
-const checkboxInputTag = (checked) => {
-  return <input type="checkbox" checked={checked} disabled />
-}
+// const checkboxInputTag = (checked) => {
+//   return <input type="checkbox" checked={checked} disabled />
+// }
 
 const Work = ({ work }) => {
   const { addMessage } = useFlash()
@@ -73,12 +73,12 @@ const Work = ({ work }) => {
               <td>{work.hoursWorked}</td>
             </tr>
             <tr>
-              <th>Client id</th>
-              <td>{work.clientId}</td>
+              <th>Client</th>
+              <td>{work.client.name}</td>
             </tr>
             <tr>
-              <th>Project id</th>
-              <td>{work.projectId}</td>
+              <th>Project</th>
+              <td>{work.project.name}</td>
             </tr>
             <tr>
               <th>Created at</th>

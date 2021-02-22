@@ -44,3 +44,8 @@ model Work {
   projectId   Int
   createdAt   DateTime @default(now())
 }
+
+model Test{
+  id          Int     @id @default(autoincrement())
+  description String
+}

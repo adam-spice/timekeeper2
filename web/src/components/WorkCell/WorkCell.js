@@ -7,8 +7,14 @@ export const QUERY = gql`
       description
       date
       hoursWorked
-      clientId
-      projectId
+      client {
+        id
+        name
+      }
+      project{
+        id
+        name
+      }
       createdAt
     }
   }

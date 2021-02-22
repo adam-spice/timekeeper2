@@ -65,8 +65,8 @@ const WorksList = ({ works }) => {
             <th>Description</th>
             <th>Date</th>
             <th>Hours worked</th>
-            <th>Client id</th>
-            <th>Project id</th>
+            <th>Client</th>
+            <th>Project</th>
             <th>Created at</th>
             <th>&nbsp;</th>
           </tr>
@@ -78,8 +78,8 @@ const WorksList = ({ works }) => {
               <td>{truncate(work.description)}</td>
               <td>{timeTag(work.date)}</td>
               <td>{truncate(work.hoursWorked)}</td>
-              <td>{truncate(work.clientId)}</td>
-              <td>{truncate(work.projectId)}</td>
+              <td>{truncate(work.client.name)}</td>
+              <td>{truncate(work.project.name)}</td>
               <td>{timeTag(work.createdAt)}</td>
               <td>
                 <nav className="rw-table-actions">
